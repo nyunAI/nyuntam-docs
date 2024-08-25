@@ -1,7 +1,7 @@
 # nyuntam_vision 
 
 ## Overview
-nyuntam_vision  provides a set of compression techniques that are tailored for specific deployment constraints. Users get the flexibility to choose and combine multiple techniques to achieve the best trade-off between model performance and deployment constraints. Leveraging cutting-edge techniques like pruning, quantization, distillation, etc, nyuntam_vision  achieves exceptional model compression levels on a variety of language and vision models. 
+nyuntam_vision  provides a set of compression techniques that are tailored for specific deployment constraints. Users get the flexibility to choose and combine multiple techniques to achieve the best trade-off between model performance and deployment constraints. Leveraging cutting-edge techniques like pruning, quantization, distillation, etc, nyuntam_vision  achieves exceptional model compression levels on a variety of vision models. 
 
 ## Basic Workflow
 
