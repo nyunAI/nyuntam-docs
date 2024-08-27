@@ -20,14 +20,15 @@ Note that in the Table below, CPU and GPU indicate the target device of deployme
 
 ## LLM Compression
 
-| Model   | LLM Quantization | LLM Engine TensorRT | LLM Engine Exllama | LLM Engine MLC-LLM | LLM Structured Pruning |
-|---------|------------------|---------------------|--------------------|--------------------|------------------------|
-| LLaMA   | ✓                | ✓                   | ✓                  | ✓                  | ✓                      |
-| LlaMA-2 | ✓                | ✓                   | ✓                  | ✓                  | ✓                      |
-| Vicuna  | ✓                | ✓                   | ✓                  | ✓                  | ✓                      |
-| Mistral | ✓                | ✓                   | ✓                  | ✓                  | -                      |
-| Mixtral | ✓                | ✓                   | ✓                  | ✓                  | -                      |
-| Gemma   | ✓                | ✓                   | -                  | -                  | -                      |
+| Model   	| AWQ 	| LMQuant (QoQ) 	| AQLM 	| TensorRT 	| Exllama 	| MLC-LLM 	| FLAP 	|
+|---------	|-----	|---------------	|------	|----------	|---------	|---------	|------	|
+| LLaMA   	| ✓   	| ✓             	| ✓    	| ✓        	| ✓       	| ✓       	| ✓    	|
+| LlaMA-2 	| ✓   	| ✓             	| ✓    	| ✓        	| ✓       	| ✓       	| ✓    	|
+| Llama-3 	| ✓   	| ✓             	| ✓    	| -        	| ✓       	| -       	| ✓    	|
+| Vicuna  	| ✓   	| ✓             	| ✓    	| ✓        	| ✓       	| ✓       	| ✓    	|
+| Mistral 	| ✓   	| ✓             	| ✓    	| ✓        	| ✓       	| ✓       	| ✓    	|
+| Mixtral 	| ✓   	| ✓             	| ✓    	| ✓        	| ✓       	| ✓       	| ✓    	|
+| Gemma   	| ✓   	| -             	| ✓    	| ✓        	| -       	| -       	| -    	|
 
 ## Adapt
 
