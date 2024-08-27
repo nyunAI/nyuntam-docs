@@ -2,20 +2,17 @@
 
 ## Overview
 
-Nyuntam is an efficiency-focused deep learning platform designed to streamline the entire development-to-deployment cycle of deep learning models. Zero offers multiple plugins covering common use cases in deep learning production cycles:
+**Nyuntam** is NyunAI's advanced suite designed to optimize, adapt, and accelerate a wide array of deep learning models across various domains. The repository is structured into several submodules, each targeting specific tasks:
 
-1. **[nyuntam_adapt](./nyuntam_adapt/index.md)**: A robust adaptation module that effortlessly fine-tunes and performs transfer learning on a diverse range of deep learning tasks and models. With nyuntam-adapt, users can adapt large and medium-sized vision and language models seamlessly, enabling the creation of custom models with just a few clicks. This module incorporates state-of-the-art adaptation methods such as (Q)-LoRA, SSF, etc., allowing users to strike the optimal balance across various model metrics, including parameter count and training throughput.
-
-2. **[nyuntam_vision](./nyuntam_vision/index.md)**: Developed to compress and optimize computer vision models , nyuntam_vision provides a set of compression techniques tailored for specific deployment constraints. Users have the flexibility to choose and combine multiple techniques to achieve the best trade-off between model performance and deployment constraints. Leveraging cutting-edge techniques like pruning, quantization, distillation, etc., nyuntam_vision achieves exceptional model compression levels on a variety of vision models across various frameworks.
-
-3. **[nyuntam_text_generation](./nyuntam_text_generation/index.md)**:  Developed to compress and optimize Large Language Models , nyuntam_text_generation provides a set of compression techniques tailored for specific deployment constraints. Users have the flexibility to choose and combine multiple techniques to achieve the best trade-off between model performance and deployment constraints. Leveraging cutting-edge techniques like pruning, quantization, distillation, etc., nyuntam_text_generation achieves exceptional model compression levels on a variety of LLMs across various frameworks.
-
+- **[Nyuntam Text Generation](./nyuntam_text_generation/index.md)**: Focuses on compressing large language models for text generation tasks.
+- **[Nyuntam Vision](./nyuntam_vision/index.md)**: Tailored for compressing and optimizing vision models.
+- **[Nyuntam Adapt](./nyuntam_adapt/index.md)**: A robust module for fine-tuning and transfer learning across both vision and language models leveraging SoTA PEFT, full-finetuning and GPU parallelism.
 
 ## Setup and Installation
 
-For hassfle-free experimentation and quick results, nyuntam provides a Command Line Interface tool : [nyunzero-cli](https://github.com/nyunAI/nyunzero-cli). The doumentation about using the cli can be found [here](./nyunzero_cli.md)
+For hassfle-free experimentation and quick results, nyuntam provides a Command Line Interface tool : [nyunzero-cli](https://github.com/nyunAI/nyunzero-cli). The documentation about using the cli can be found [here](./nyunzero_cli.md)
 
-Nyuntam is a fully opensource project and users can go through the code and contribute at [nyunam](https://github.com/nyunAI/nyuntam).
+Nyuntam is a fully opensource project and users can go through the code and contribute to [nyuntam](https://github.com/nyunAI/nyuntam).
 
 ## About NyunAI
 

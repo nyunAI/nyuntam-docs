@@ -1,7 +1,7 @@
 # Algorithms
 
 ## Overview
-nyuntam_vision currently supports the following tasks and respective algorithms -
+Nyuntam Vision currently supports the following tasks and respective algorithms -
 
 * Image Classification -
     * [CPU Post Training Quantization - Torch](#cpu-post-training-quantization-torch)
