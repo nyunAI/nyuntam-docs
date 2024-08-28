@@ -1,0 +1,1969 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://zero.nyunai.com/docs/nyuntam_text_generation/algorithms/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../examples/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Algorithms - Nyun Zero</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Algorithms - Nyun Zero" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://zero.nyunai.com/docs/assets/images/social/nyuntam_text_generation/algorithms.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://zero.nyunai.com/docs/nyuntam_text_generation/algorithms/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Algorithms - Nyun Zero" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://zero.nyunai.com/docs/assets/images/social/nyuntam_text_generation/algorithms.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nyuntam-text-generation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.nyunai.com" title="Nyun Zero" class="md-header__button md-logo" aria-label="Nyun Zero" data-md-component="logo">
+      
+  <img src="../../assets/nyun.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nyun Zero
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.nyunai.com" title="Nyun Zero" class="md-nav__button md-logo" aria-label="Nyun Zero" data-md-component="logo">
+      
+  <img src="../../assets/nyun.png" alt="logo">
+
+    </a>
+    Nyun Zero
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nyuntam_adapt/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nyuntam Adapt
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Nyuntam Adapt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nyuntam_adapt/algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nyuntam_vision/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nyuntam Vision
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Nyuntam Vision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nyuntam_vision/algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nyuntam Text Generation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Nyuntam Text Generation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-structured-pruning" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Structured Pruning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Structured Pruning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluctuation-based-adaptive-structured-pruning-flap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fluctuation-based Adaptive Structured Pruning (FLAP)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-quantization" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Quantization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Quantization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#w4a16-activation-aware-weight-quantization-awq" class="md-nav__link">
+    <span class="md-ellipsis">
+      W4A16 Activation aware Weight-Quantization (AWQ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w4a8kv4-quattuor-octo-quattuor-qoq" class="md-nav__link">
+    <span class="md-ellipsis">
+      W4A8KV4 Quattuor-octo-Quattuor (QoQ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w2a16-additive-quantization-of-language-models-aqlm" class="md-nav__link">
+    <span class="md-ellipsis">
+      W2A16 Additive Quantization of Language Models (AQLM)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llm-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM Engine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tensorrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      TensorRT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TensorRT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelquantization-support-grid" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model/Quantization Support Grid
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exllama" class="md-nav__link">
+    <span class="md-ellipsis">
+      ExLlama
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mlcllm" class="md-nav__link">
+    <span class="md-ellipsis">
+      MLCLLM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nyuntam-text-generation">Nyuntam Text Generation</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#nyuntam-text-generation">Nyuntam Text Generation</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#llm-structured-pruning">LLM Structured Pruning</a><ul>
+<li><a href="#fluctuation-based-adaptive-structured-pruning-flap">Fluctuation-based Adaptive Structured Pruning (FLAP)</a></li>
+</ul>
+</li>
+<li><a href="#llm-quantization">LLM Quantization</a><ul>
+<li><a href="#w4a16-activation-aware-weight-quantization-awq">W4A16 Activation aware Weight-Quantization (AWQ)</a></li>
+<li><a href="#w4a8kv4-quattuor-octo-quattuor-qoq">W4A8KV4 Quattuor-octo-Quattuor (QoQ)</a></li>
+<li><a href="#w2a16-additive-quantization-of-language-models-aqlm">W2A16 Additive Quantization of Language Models (AQLM)</a></li>
+</ul>
+</li>
+<li><a href="#llm-engine">LLM Engine</a><ul>
+<li><a href="#tensorrt">TensorRT</a><ul>
+<li><a href="#modelquantization-support-grid">Model/Quantization Support Grid</a></li>
+</ul>
+</li>
+<li><a href="#exllama">ExLlama</a></li>
+<li><a href="#mlcllm">MLCLLM</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<p>Nyuntam Text Generation is a comprehensive suite of tools and algorithms designed to optimize and accelerate the inference of large language models (LLMs) for text generation tasks. The suite encompasses various techniques such as structured pruning, quantization, and engine optimization, all aimed at enhancing the efficiency of LLMs. These tools are compatible with popular models like GPT-2, GPT-3, and BERT and can be deployed across a wide range of platforms, including CPUs, GPUs, and edge devices.</p>
+<h2 id="llm-structured-pruning">LLM Structured Pruning</h2>
+<h3 id="fluctuation-based-adaptive-structured-pruning-flap">Fluctuation-based Adaptive Structured Pruning (FLAP)</h3>
+<p>FLAP is an innovative framework that enhances the efficiency of Large Language Models (LLMs) by reducing storage requirements and improving inference speed. This framework outputs <code>model.safetensors</code>, which can be directly loaded using <a href="https://github.com/nyunAI/nyuntam/blob/71f75e8c0b1b81a49758d3c2f87d89c99ff3124d/examples/text-generation/flap_pruning/convert_to_hf.py#L11"><code>load_and_replace_weights</code></a>.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pruning_ratio</td>
+<td>Float</td>
+<td>Pruning ratio</td>
+<td>0.5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>metrics</td>
+<td>"WIFV"</td>
+<td>Importance metric:<br>"WIFV" (Weighted Importance Feature Value)</td>
+<td>"WIFV"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>structure</td>
+<td>"AL-AM"</td>
+<td>Pruning structure:<br>"AL-AM" (Adaptive across both Layers and Modules)</td>
+<td>"AL-MM"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>remove_heads</td>
+<td>Int</td>
+<td>Number of heads to remove</td>
+<td>-1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>nsamples</td>
+<td>Int</td>
+<td>Number of samples for evaluation</td>
+<td>2048</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>start_pruning_layer_idx</td>
+<td>Int</td>
+<td>Decoder Layer index to start pruning from.</td>
+<td>22</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="llm-quantization">LLM Quantization</h2>
+<h3 id="w4a16-activation-aware-weight-quantization-awq">W4A16 Activation aware Weight-Quantization (AWQ)</h3>
+<p>LLM Quantization involves a 4-bit weight-only quantization method specifically designed for Language Model (LM) applications. This method uses GEMM (General Matrix Multiply) as the default operation. The process generates <code>*.safetensor</code> and <code>config.json</code> files that can be directly loaded by transformers' <code>AutoModelForCausalLM.from_pretrained()</code> or AutoAWQ's <code>AutoAWQForCausalLM.from_quantized()</code> for quantized models.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>zero_point</td>
+<td>bool</td>
+<td>Whether to use <a href="https://github.com/google/gemmlowp/blob/master/doc/quantization.md#domain-specific-constraint-the-real-value-0-must-be-exactly-representable">zero point</a>.</td>
+<td>True</td>
+</tr>
+<tr>
+<td>q_group_size</td>
+<td>Int</td>
+<td>Quantization group size</td>
+<td>128</td>
+</tr>
+<tr>
+<td>w_bit</td>
+<td>Int</td>
+<td>Weight bitwidth (only 4-bit is supported)</td>
+<td>4</td>
+</tr>
+<tr>
+<td>version</td>
+<td>"GEMM", "GEMV"</td>
+<td>Version of AutoAWQ. One of GEMM or GEMV.</td>
+<td>"GEMM"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="w4a8kv4-quattuor-octo-quattuor-qoq">W4A8KV4 Quattuor-octo-Quattuor (QoQ)</h3>
+<p>QoQ employs a 4-bit weight, 8-bit activation, and 4-bit KV cache configuration. The algorithm includes a progressive quantization strategy to reduce dequantization overhead and a SmoothAttention mechanism to mitigate accuracy loss from 4-bit KV quantization.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>save_model</td>
+<td>True</td>
+<td>Whether to save the model</td>
+<td>True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>keep_scales</td>
+<td>True</td>
+<td>Whether to keep scales during quantization</td>
+<td>True</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>loads_with_qserve</td>
+<td>False</td>
+<td>Whether the model loads with <a href="https://github.com/mit-han-lab/qserve">QServe</a></td>
+<td>False</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>quant_type</td>
+<td>"gchn",<br>"g128",<br>"awq",<br>"gptq",<br>"sq_dynamic",<br>"sq_static"</td>
+<td>Quantization type -<br>"gchn": QoQ Algorithm (Channelwise)<br>"g128": QoQ Algorithm (Groupwise)<br>"awq": AWQ Algorithm<br>"gptq": GPTQ Algorithm<br>"sq_dynamic": SmoothQuant Algorithm (Dynamic)<br>"sq_static": SmoothQuant Algorithm (Static)</td>
+<td>"gchn"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>eval.tasks</td>
+<td>arc_challenge:25</td>
+<td>Evaluation tasks</td>
+<td>arc_challenge:25</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>eval.max_seq_length</td>
+<td>4096</td>
+<td>Maximum sequence length for evaluation</td>
+<td>4096</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>eval.evaluator</td>
+<td>"lm_eval"</td>
+<td>Evaluator used for evaluation</td>
+<td>"lm_eval"</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Other nested config parameters can be updated as <a href="https://github.com/nyunAI/nyuntam-text-generation/blob/9542023ef0836e4346c45eecaad83711c71efadc/scripts/quantisation/lmquant.yaml#L35">here</a>. Find all the default configs for <code>quant_type</code> <a href="https://github.com/nyunAI/nyuntam-text-generation/tree/9542023ef0836e4346c45eecaad83711c71efadc/quantization/mit_han_lab_lmquant/configs">here</a>.</em></p>
+<h3 id="w2a16-additive-quantization-of-language-models-aqlm">W2A16 Additive Quantization of Language Models (AQLM)</h3>
+<p>AQLM introduces learned additive quantization, tailored to each transformer block, and jointly optimizes codebook parameters across blocks. It stands out for being Pareto-optimal in accuracy vs. model size for models compressed to less than 3 bits per parameter. AQLM also offers practical, fast implementations for GPU and CPU, making it suitable for deploying LLMs on end-user devices.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>save_intermediate_results</td>
+<td>bool</td>
+<td>Whether to save intermediate results</td>
+<td>true</td>
+</tr>
+<tr>
+<td>dtype</td>
+<td>string</td>
+<td>Data type for quantization</td>
+<td>"float16"</td>
+</tr>
+<tr>
+<td>Calibration Config</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>attn_implementation</td>
+<td>null or string</td>
+<td>Attention implementation</td>
+<td>null</td>
+</tr>
+<tr>
+<td>beam_size</td>
+<td>int</td>
+<td>Beam size for calibration</td>
+<td>1</td>
+</tr>
+<tr>
+<td>codebook_value_nbits</td>
+<td>int</td>
+<td>Number of bits for codebook values</td>
+<td>16</td>
+</tr>
+<tr>
+<td>codebook_value_num_groups</td>
+<td>int</td>
+<td>Number of groups for codebook values</td>
+<td>1</td>
+</tr>
+<tr>
+<td>dtype</td>
+<td>string</td>
+<td>Data type for calibration</td>
+<td>"float16"</td>
+</tr>
+<tr>
+<td>finetune_adam_beta1</td>
+<td>float</td>
+<td>Adam beta1 for finetuning</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>finetune_adam_beta2</td>
+<td>float</td>
+<td>Adam beta2 for finetuning</td>
+<td>0.999</td>
+</tr>
+<tr>
+<td>finetune_batch_size</td>
+<td>int</td>
+<td>Batch size for finetuning</td>
+<td>16</td>
+</tr>
+<tr>
+<td>finetune_early_stop</td>
+<td>int</td>
+<td>Early stopping criterion for finetuning</td>
+<td>3</td>
+</tr>
+<tr>
+<td>finetune_keep_best</td>
+<td>bool</td>
+<td>Whether to keep the best model during finetuning</td>
+<td>true</td>
+</tr>
+<tr>
+<td>finetune_lr</td>
+<td>float</td>
+<td>Learning rate for finetuning</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td>finetune_max_epochs</td>
+<td>int</td>
+<td>Maximum number of epochs for finetuning</td>
+<td>25</td>
+</tr>
+<tr>
+<td>in_group_size</td>
+<td>int</td>
+<td>Input group size</td>
+<td>8</td>
+</tr>
+<tr>
+<td>init_max_iter</td>
+<td>int</td>
+<td>Maximum iterations for initialization</td>
+<td>100</td>
+</tr>
+<tr>
+<td>init_max_points_per_centroid</td>
+<td>null or int</td>
+<td>Maximum points per centroid for initialization</td>
+<td>null</td>
+</tr>
+<tr>
+<td>local_batch_size</td>
+<td>int</td>
+<td>Local batch size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>lr</td>
+<td>float</td>
+<td>Learning rate</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td>max_epochs</td>
+<td>int</td>
+<td>Maximum number of epochs</td>
+<td>100</td>
+</tr>
+<tr>
+<td>mix_compression</td>
+<td>bool</td>
+<td>Whether to use mixed compression</td>
+<td>false</td>
+</tr>
+<tr>
+<td>model_seqlen</td>
+<td>int</td>
+<td>Model sequence length</td>
+<td>4096</td>
+</tr>
+<tr>
+<td>nbits_per_codebook</td>
+<td>int</td>
+<td>Number of bits per codebook</td>
+<td>16</td>
+</tr>
+<tr>
+<td>new_eval</td>
+<td>bool</td>
+<td>Whether to use new evaluation</td>
+<td>false</td>
+</tr>
+<tr>
+<td>no_quant</td>
+<td>bool</td>
+<td>Whether to disable quantization</td>
+<td>false</td>
+</tr>
+<tr>
+<td>nsamples</td>
+<td>int</td>
+<td>Number of samples</td>
+<td>2048</td>
+</tr>
+<tr>
+<td>num_codebooks</td>
+<td>int</td>
+<td>Number of codebooks</td>
+<td>1</td>
+</tr>
+<tr>
+<td>offload_activations</td>
+<td>bool</td>
+<td>Whether to offload activations</td>
+<td>true</td>
+</tr>
+<tr>
+<td>on_save</td>
+<td>null or function</td>
+<td>Function to call on save</td>
+<td>null</td>
+</tr>
+<tr>
+<td>out_group_size</td>
+<td>int</td>
+<td>Output group size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>print_frequency</td>
+<td>int</td>
+<td>Frequency of printing</td>
+<td>10</td>
+</tr>
+<tr>
+<td>relative_mse_tolerance</td>
+<td>float</td>
+<td>Relative MSE tolerance</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>resume</td>
+<td>bool</td>
+<td>Whether to resume training</td>
+<td>false</td>
+</tr>
+<tr>
+<td>scale_nbits</td>
+<td>int</td>
+<td>Number of bits for scaling</td>
+<td>0</td>
+</tr>
+<tr>
+<td>seed</td>
+<td>int</td>
+<td>Random seed</td>
+<td>0</td>
+</tr>
+<tr>
+<td>skip_out_loss</td>
+<td>bool</td>
+<td>Whether to skip output loss</td>
+<td>false</td>
+</tr>
+<tr>
+<td>steps_per_epoch</td>
+<td>int</td>
+<td>Steps per epoch</td>
+<td>100</td>
+</tr>
+<tr>
+<td>true_sequential</td>
+<td>bool</td>
+<td>Whether to use true sequential processing</td>
+<td>false</td>
+</tr>
+<tr>
+<td>trust_remote_code</td>
+<td>bool</td>
+<td>Whether to trust remote code</td>
+<td>true</td>
+</tr>
+<tr>
+<td>use_checkpointing</td>
+<td>bool</td>
+<td>Whether to use checkpointing</td>
+<td>false</td>
+</tr>
+<tr>
+<td>use_faiss</td>
+<td>bool</td>
+<td>Whether to use Faiss</td>
+<td>false</td>
+</tr>
+<tr>
+<td>use_fast_tokenizer</td>
+<td>bool</td>
+<td>Whether to use fast tokenizer</td>
+<td>false</td>
+</tr>
+<tr>
+<td>val_size</td>
+<td>int</td>
+<td>Validation size</td>
+<td>256</td>
+</tr>
+<tr>
+<td>wandb</td>
+<td>bool</td>
+<td>Whether to use Weights &amp; Biases</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Finetune Config</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>adam_beta1</td>
+<td>float</td>
+<td>Adam beta1 for finetuning</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>adam_beta2</td>
+<td>float</td>
+<td>Adam beta2 for finetuning</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>amp_dtype</td>
+<td>string</td>
+<td>AMP data type</td>
+<td>float32</td>
+</tr>
+<tr>
+<td>amsgrad</td>
+<td>bool</td>
+<td>Whether to use AMSGrad</td>
+<td>false</td>
+</tr>
+<tr>
+<td>attn_implementation</td>
+<td>null or string</td>
+<td>Attention implementation for finetuning</td>
+<td>null</td>
+</tr>
+<tr>
+<td>base_model</td>
+<td>string</td>
+<td>Base model name</td>
+<td>base_model</td>
+</tr>
+<tr>
+<td>batch_size</td>
+<td>int</td>
+<td>Batch size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>beam_size</td>
+<td>int</td>
+<td>Beam size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>block_type</td>
+<td>string</td>
+<td>Block type</td>
+<td>LlamaDecoderLayer</td>
+</tr>
+<tr>
+<td>code_adam_16bit</td>
+<td>bool</td>
+<td>Whether to use 16-bit Adam for codes</td>
+<td>false</td>
+</tr>
+<tr>
+<td>code_beta1</td>
+<td>float</td>
+<td>Beta1 for code optimization</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>code_beta2</td>
+<td>float</td>
+<td>Beta2 for code optimization</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>code_dtype</td>
+<td>string</td>
+<td>Data type for codes</td>
+<td>uint16</td>
+</tr>
+<tr>
+<td>code_lr</td>
+<td>float</td>
+<td>Learning rate for codes</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>code_selection_temperature</td>
+<td>float</td>
+<td>Temperature for code selection</td>
+<td>0</td>
+</tr>
+<tr>
+<td>code_trust_ratio</td>
+<td>float</td>
+<td>Trust ratio for codes</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>debias</td>
+<td>bool</td>
+<td>Whether to debias</td>
+<td>true</td>
+</tr>
+<tr>
+<td>delta_decay</td>
+<td>float</td>
+<td>Delta decay</td>
+<td>0</td>
+</tr>
+<tr>
+<td>download_num_workers</td>
+<td>null or int</td>
+<td>Number of workers for downloading</td>
+<td>null</td>
+</tr>
+<tr>
+<td>eval_datasets</td>
+<td>list</td>
+<td>Evaluation datasets</td>
+<td>["wikitext2", "c4"]</td>
+</tr>
+<tr>
+<td>eval_every_steps</td>
+<td>int</td>
+<td>Evaluate every n steps</td>
+<td>1</td>
+</tr>
+<tr>
+<td>force_code_update</td>
+<td>bool</td>
+<td>Whether to force code update</td>
+<td>false</td>
+</tr>
+<tr>
+<td>gradient_checkpointing</td>
+<td>bool</td>
+<td>Whether to use gradient checkpointing</td>
+<td>true</td>
+</tr>
+<tr>
+<td>keep_best_model</td>
+<td>bool</td>
+<td>Whether to keep the best model</td>
+<td>false</td>
+</tr>
+<tr>
+<td>lamb</td>
+<td>bool</td>
+<td>Whether to use LAMB optimizer</td>
+<td>true</td>
+</tr>
+<tr>
+<td>limit_parallel_inits</td>
+<td>int</td>
+<td>Limit on parallel initializations</td>
+<td>1</td>
+</tr>
+<tr>
+<td>load_dtype</td>
+<td>string</td>
+<td>Data type for loading</td>
+<td>float32</td>
+</tr>
+<tr>
+<td>lr</td>
+<td>float</td>
+<td>Learning rate</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td>master_dtype</td>
+<td>string</td>
+<td>Master data type</td>
+<td>float32</td>
+</tr>
+<tr>
+<td>max_code_change_per_step</td>
+<td>float</td>
+<td>Maximum code change per step</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>max_epochs</td>
+<td>int</td>
+<td>Maximum number of epochs</td>
+<td>10</td>
+</tr>
+<tr>
+<td>microbatch_size</td>
+<td>int</td>
+<td>Microbatch size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>minimize_sync</td>
+<td>bool</td>
+<td>Whether to minimize synchronization</td>
+<td>false</td>
+</tr>
+<tr>
+<td>model_seqlen</td>
+<td>int</td>
+<td>Model sequence length</td>
+<td>4096</td>
+</tr>
+<tr>
+<td>monkeypatch_old_pickle</td>
+<td>bool</td>
+<td>Whether to monkeypatch old pickle</td>
+<td>false</td>
+</tr>
+<tr>
+<td>num_workers</td>
+<td>int</td>
+<td>Number of workers</td>
+<td>8</td>
+</tr>
+<tr>
+<td>overwrite_cache</td>
+<td>bool</td>
+<td>Whether to overwrite cache</td>
+<td>false</td>
+</tr>
+<tr>
+<td>preprocessing_chunk_length</td>
+<td>null or int</td>
+<td>Preprocessing chunk length</td>
+<td>null</td>
+</tr>
+<tr>
+<td>preprocessing_keep_in_memory</td>
+<td>bool</td>
+<td>Whether to keep preprocessing in memory</td>
+<td>false</td>
+</tr>
+<tr>
+<td>preprocessing_num_workers</td>
+<td>int</td>
+<td>Number of preprocessing workers</td>
+<td>24</td>
+</tr>
+<tr>
+<td>print_every_steps</td>
+<td>int</td>
+<td>Print every n steps</td>
+<td>1</td>
+</tr>
+<tr>
+<td>save_every_steps</td>
+<td>int</td>
+<td>Save every n steps</td>
+<td>1</td>
+</tr>
+<tr>
+<td>seed</td>
+<td>int</td>
+<td>Random seed</td>
+<td>1337</td>
+</tr>
+<tr>
+<td>straight_through_buffer_dtype</td>
+<td>string</td>
+<td>Straight-through buffer data type</td>
+<td>float32</td>
+</tr>
+<tr>
+<td>trust_remote_code</td>
+<td>bool</td>
+<td>Whether to trust remote code</td>
+<td>true</td>
+</tr>
+<tr>
+<td>update_codebooks_and_scales</td>
+<td>bool</td>
+<td>Whether to update codebooks and scales</td>
+<td>true</td>
+</tr>
+<tr>
+<td>update_codes</td>
+<td>bool</td>
+<td>Whether to update codes</td>
+<td>true</td>
+</tr>
+<tr>
+<td>update_non_quantized_parameters</td>
+<td>bool</td>
+<td>Whether to update non-quantized parameters</td>
+<td>true</td>
+</tr>
+<tr>
+<td>use_fast_tokenizer</td>
+<td>bool</td>
+<td>Whether to use fast tokenizer</td>
+<td>false</td>
+</tr>
+<tr>
+<td>use_fsdp_amp</td>
+<td>bool</td>
+<td>Whether to use FSDP AMP</td>
+<td>false</td>
+</tr>
+<tr>
+<td>verbose_optimizer</td>
+<td>bool</td>
+<td>Whether to use verbose optimizer</td>
+<td>true</td>
+</tr>
+<tr>
+<td>wandb</td>
+<td>bool</td>
+<td>Whether to use Weights &amp; Biases</td>
+<td>false</td>
+</tr>
+<tr>
+<td>wrap_separately</td>
+<td>list</td>
+<td>Layers to wrap separately</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>Conversion Config</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>attn_implementation</td>
+<td>null or string</td>
+<td>Attention implementation for conversion</td>
+<td>null</td>
+</tr>
+<tr>
+<td>code_dtype</td>
+<td>string</td>
+<td>Data type for codes</td>
+<td>int32</td>
+</tr>
+<tr>
+<td>load_dtype</td>
+<td>string</td>
+<td>Data type for loading</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>trust_remote_code</td>
+<td>bool</td>
+<td>Whether to trust remote code for conversion</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="llm-engine">LLM Engine</h2>
+<h3 id="tensorrt">TensorRT</h3>
+<p>The LLM Engine TensorRT optimizes LLMs for inference by building TensorRT engines equipped with state-of-the-art optimizations to ensure efficient inference performance. The output is a <code>.engine</code> model file that can be directly loaded by NVIDIA Triton Inference Server.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to_quantize</td>
+<td>bool</td>
+<td>Whether to quantize the model before building the engine.</td>
+<td>True</td>
+</tr>
+<tr>
+<td>quant_method</td>
+<td>"fp8", "int4_awq", "smoothquant", "int8"</td>
+<td>Quantization format</td>
+<td>"int4_awq"</td>
+</tr>
+<tr>
+<td>smoothquant</td>
+<td>float</td>
+<td>(if quant_method = "smoothquant") The smooth quant's α value, which controls quantization difficulty migration between activations and weights.</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>calib_size</td>
+<td>Int</td>
+<td>Calibration size</td>
+<td>32</td>
+</tr>
+<tr>
+<td>dtype</td>
+<td>"float16"</td>
+<td>The data type of the model</td>
+<td>"float16"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="modelquantization-support-grid">Model/Quantization Support Grid</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>fp8</th>
+<th>int4_awq</th>
+<th>smoothquant</th>
+<th>int8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLaMA</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>LLaMA-2</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Vicuna</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Mixtral</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Mistral-7B</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Gemma</td>
+<td>✓</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exllama">ExLlama</h3>
+<p>LLM Engine ExLlama introduces a new quantization format known as EXL2, providing flexibility in weight storage. This implementation generates engine files and a script for fast inference on the given model. The output includes <code>.safetensor</code>, <code>config.json</code> model files, and a <code>run.sh</code> script for test inference using ExllamaV2.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bits</td>
+<td>Float &gt;= 2 , &lt;= 8</td>
+<td>Target bits per weight</td>
+<td>4.125</td>
+</tr>
+<tr>
+<td>shard_size</td>
+<td>Int</td>
+<td>Maximum shard size in MB while saving the model</td>
+<td>8192</td>
+</tr>
+<tr>
+<td>rope_scale</td>
+<td>Float</td>
+<td>RoPE scaling factor (related to RoPE (NTK) parameters)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>rope_alpha</td>
+<td>Float</td>
+<td>RoPE alpha value (related to RoPE (NTK) parameters)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>head_bits</td>
+<td>Int</td>
+<td>Target bits per weight (for the head layer)</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mlcllm">MLCLLM</h3>
+<p>The LLM Engine MLCLLM offers compiler accelerations and runtime optimizations for native deployment across various platforms, including edge devices. The output consists of <code>params-*.bin</code> files and compiled files that can be directly used by MLC Chat, along with a <code>run.py</code> script for sample usage.</p>
+<p><strong>Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>quantize</td>
+<td>bool</td>
+<td>Indicates whether quantization is applied to the model</td>
+<td>True</td>
+</tr>
+<tr>
+<td>quant_method</td>
+<td>"q4f16_0", "q4f16_autoawq"</td>
+<td>Method used for quantization</td>
+<td>"q4f16_autoawq"</td>
+</tr>
+<tr>
+<td>conv_template</td>
+<td>"llama-2"</td>
+<td><a href="https://github.com/mlc-ai/mlc-llm/blob/main/python/mlc_chat/conversation_template.py">Conversation templates</a></td>
+<td>None</td>
+</tr>
+<tr>
+<td>llvm_triple</td>
+<td>null</td>
+<td>LLVM triple</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>

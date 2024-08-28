@@ -1,0 +1,1665 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://zero.nyunai.com/docs/nyuntam_vision/algorithms/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../nyuntam_text_generation/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Algorithms - Nyun Zero</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Algorithms - Nyun Zero" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://zero.nyunai.com/docs/assets/images/social/nyuntam_vision/algorithms.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://zero.nyunai.com/docs/nyuntam_vision/algorithms/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Algorithms - Nyun Zero" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://zero.nyunai.com/docs/assets/images/social/nyuntam_vision/algorithms.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://www.nyunai.com" title="Nyun Zero" class="md-header__button md-logo" aria-label="Nyun Zero" data-md-component="logo">
+      
+  <img src="../../assets/nyun.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nyun Zero
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://www.nyunai.com" title="Nyun Zero" class="md-nav__button md-logo" aria-label="Nyun Zero" data-md-component="logo">
+      
+  <img src="../../assets/nyun.png" alt="logo">
+
+    </a>
+    Nyun Zero
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infra.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connect Infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataset Import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support Grid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nyuntam_adapt/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nyuntam Adapt
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Nyuntam Adapt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nyuntam_adapt/algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nyuntam Vision
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Nyuntam Vision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vision-compressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vision Compressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vision Compressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu-post-training-quantization-torch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Post Training Quantization - Torch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-post-training-quantization-openvino" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Post Training Quantization - OpenVino
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-post-training-quantization-onnx" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Post Training Quantization - ONNX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-quantization-aware-training-torch" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Quantization Aware Training - Torch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-quantization-aware-training-openvino" class="md-nav__link">
+    <span class="md-ellipsis">
+      CPU Quantization Aware Training - OpenVino
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-post-training-quantization-tensorrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      GPU Post Training Quantization - TensorRT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-distillation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge Distillation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structured-pruning-image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured Pruning (Image Classification)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structured-pruning-object-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured Pruning (Object Detection)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../nyuntam_text_generation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Nyuntam Text Generation
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Nyuntam Text Generation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nyuntam_text_generation/algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../examples/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="algorithms">Algorithms</h1>
+<h2 id="overview">Overview</h2>
+<p>Nyuntam Vision currently supports the following tasks and respective algorithms -</p>
+<ul>
+<li>Image Classification -<ul>
+<li><a href="#cpu-post-training-quantization-torch">CPU Post Training Quantization - Torch</a></li>
+<li><a href="#cpu-post-training-quantization-openvino">CPU Post Training Quantization - OpenVino</a></li>
+<li><a href="#cpu-post-training-quantization-onnx">CPU Post Training Quantization - ONNX</a></li>
+<li><a href="#gpu-post-training-quantization-tensorrt">GPU Post Training Quantization - TensorRT</a></li>
+<li><a href="#cpu-quantization-aware-training-torch">CPU Quantization Aware Training - Torch</a></li>
+<li><a href="#knowledge-distillation">Knowledge Distillation</a></li>
+<li><a href="#structured-pruning-image-classification">Structured Pruning</a></li>
+</ul>
+</li>
+<li>Object Detection -<ul>
+<li><a href="#cpu-post-training-quantization-onnx">CPU Post Training Quantization - ONNX</a></li>
+<li><a href="#gpu-post-training-quantization-tensorrt">GPU Post Training Quantization - TensorRT</a></li>
+<li><a href="#cpu-quantization-aware-training-openvino">CPU Quantization Aware Training - OpenVino</a></li>
+<li><a href="#knowledge-distillation">Knowledge Distillation</a></li>
+<li><a href="#structured-pruning-object-detection">Structured Pruning</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="vision-compressions">Vision Compressions</h3>
+<h4 id="cpu-post-training-quantization-torch">CPU Post Training Quantization - Torch</h4>
+<p>Native CPU quantization. 8 bit quantization by default. Outputs <code>.pt</code> model file which can be directly loaded by <code>torch.load</code>. </p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insize</td>
+<td>Int</td>
+<td>Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td>32</td>
+</tr>
+<tr>
+<td>BATCH_SIZE</td>
+<td>Int</td>
+<td>Batch Size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TRAINING</td>
+<td>bool</td>
+<td>Enables Finetuning before PTQ</td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATE</td>
+<td>bool</td>
+<td>Enables Validation during Optional Finetuning <strong>(When TRAINING=True)</strong></td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATION_INTERVAL</td>
+<td>Int</td>
+<td>Defines Epoch Intervals for Validation during Finetuning <strong>(When TRAINING, VALIDATE = True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>CRITERION</td>
+<td>"CrossEntropyLoss",<br>"MSE Loss",<br><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></td>
+<td>Defines Loss functions for finetuning/validation <strong>(When TRAINING = True)</strong></td>
+<td>"CrossEntropyLoss"</td>
+</tr>
+<tr>
+<td>LEARNING RATE</td>
+<td>Float</td>
+<td>Defines Learning Rate for Finetuning <strong>(When TRAINING=True)</strong></td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>FINETUNE_EPOCHS</td>
+<td>Int</td>
+<td>Defines the number of Epochs for Finetuning <strong>(When TRAINING=True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>OPTIMIZER</td>
+<td>"Adam",<br>"SGD",<br><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a></td>
+<td>Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td>Adam</td>
+</tr>
+<tr>
+<td>PRETRAINED</td>
+<td>bool</td>
+<td>Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td>False</td>
+</tr>
+<tr>
+<td>choice</td>
+<td>"static","weight" or "fusion"</td>
+<td>Indicates the Kind of PTQ to be performed.</td>
+<td>"static"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cpu-post-training-quantization-openvino">CPU Post Training Quantization - OpenVino</h4>
+<p>Neural networks inference optimization in OpenVINORuntime with minimal accuracy drop. Outputs <code>.xml</code> and <code>.bin</code> model files which can be directly loaded by <code>openvino.core.read_model</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insize</td>
+<td>Int</td>
+<td>Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td>32</td>
+</tr>
+<tr>
+<td>BATCH_SIZE</td>
+<td>Int</td>
+<td>Batch Size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TRAINING</td>
+<td>bool</td>
+<td>Enables Finetuning before PTQ</td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATE</td>
+<td>bool</td>
+<td>Enables Validation during Optional Finetuning <strong>(When TRAINING = True)</strong></td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATION_INTERVAL</td>
+<td>Int</td>
+<td>Defines Epoch Intervals for Validation during Finetuning <strong>(When TRAINING, VALIDATE = True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>CRITERION</td>
+<td>"CrossEntropyLoss",<br>"MSE Loss",<br><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></td>
+<td>Defines Loss functions for finetuning/validation <strong>(When TRAINING = True)</strong></td>
+<td>CrossEntropyLoss</td>
+</tr>
+<tr>
+<td>LEARNING RATE</td>
+<td>Float</td>
+<td>Defines Learning Rate for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>FINETUNE_EPOCHS</td>
+<td>Int</td>
+<td>Defines the number of Epochs for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>OPTIMIZER</td>
+<td>"Adam",<br>"SGD",<br><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a></td>
+<td>Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td>Adam</td>
+</tr>
+<tr>
+<td>PRETRAINED</td>
+<td>bool</td>
+<td>Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td>False</td>
+</tr>
+<tr>
+<td>TRANSFORMER</td>
+<td>bool</td>
+<td>Indicates whether uploaded model consists a transformer based architecture (Only For Classification)</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cpu-post-training-quantization-onnx">CPU Post Training Quantization - ONNX</h4>
+<p>ONNX 8-bit CPU Post Training Quantization for Pytorch models. Outputs <code>.onnx</code> model files which can be directly loaded by <code>onnx.load</code>. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Values</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Default</strong> <strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">insize</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td style="text-align: left;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">BATCH_SIZE</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Batch Size for dataloader</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">TRAINING</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Enables Finetuning before PTQ</td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATE</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;"><p>Enables Validation during Optional Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATION_INTERVAL</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines Epoch Intervals for Validation during Finetuning.</p><p><strong>(When TRAINING, VALIDATE = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">CRITERION</td>
+<td style="text-align: left;"><p>“CrossEntropyLoss”,</p><p>“MSE Loss”,</p><p><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></p></td>
+<td style="text-align: left;"><p>Defines Loss functions for finetuning/validation</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">CrossEntropyLoss</td>
+</tr>
+<tr>
+<td style="text-align: left;">LEARNING RATE</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Defines Learning Rate for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: left;">FINETUNE_EPOCHS</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines the number of Epochs for Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">OPTIMIZER</td>
+<td style="text-align: left;"><p>“Adam”,</p><p>“SGD”,</p><p><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a> </p></td>
+<td style="text-align: left;">Defines Optimizer for Finetuning. <strong>(When TRAINING = True)</strong></td>
+<td style="text-align: left;">Adam</td>
+</tr>
+<tr>
+<td style="text-align: left;">PRETRAINED</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;">quant_format</td>
+<td style="text-align: left;">QuantFormat.QDQ, QuantFormat.QOperator</td>
+<td style="text-align: left;">Indicates the ONNX quantization representation format</td>
+<td style="text-align: left;">QuantFormat.QDQ</td>
+</tr>
+<tr>
+<td style="text-align: left;">per_channel</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Indicates usage of "Per Channel" quantization that improves accuracy of models with large weight range</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;">activation_type</td>
+<td style="text-align: left;"><p>QuantType.QInt8, QuantType.QUInt8, QuantType.QFLOAT8E4M3FN, QuantType.QInt16, QuantType.QUInt16</p><p></p></td>
+<td style="text-align: left;">Indicates the expected data type of activations post quantization</td>
+<td style="text-align: left;">QuantType.QInt8</td>
+</tr>
+<tr>
+<td style="text-align: left;">weight_type</td>
+<td style="text-align: left;"><p>QuantType.QInt8, QuantType.QUInt8, QuantType.QFLOAT8E4M3FN, QuantType.QInt16, QuantType.QUInt16</p><p></p></td>
+<td style="text-align: left;">Indicates the expected data type of weights post quantization</td>
+<td style="text-align: left;">QuantType.QInt8</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cpu-quantization-aware-training-torch">CPU Quantization Aware Training - Torch</h4>
+<p>Native CPU quantization. 8 bit quantization by default. Outputs <code>.pt</code> model file which can be directly loaded by <code>torch.load</code>. </p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insize</td>
+<td>Int</td>
+<td>Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td>32</td>
+</tr>
+<tr>
+<td>BATCH_SIZE</td>
+<td>Int</td>
+<td>Batch Size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TRAINING</td>
+<td>bool</td>
+<td>Enables Finetuning before PTQ</td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATE</td>
+<td>bool</td>
+<td>Enables Validation during Optional Finetuning <strong>(When TRAINING=True)</strong></td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATION_INTERVAL</td>
+<td>Int</td>
+<td>Defines Epoch Intervals for Validation during Finetuning <strong>(When TRAINING, VALIDATE = True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>CRITERION</td>
+<td>"CrossEntropyLoss",<br>"MSE Loss",<br><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></td>
+<td>Defines Loss functions for finetuning/validation <strong>(When TRAINING = True)</strong></td>
+<td>"CrossEntropyLoss"</td>
+</tr>
+<tr>
+<td>LEARNING RATE</td>
+<td>Float</td>
+<td>Defines Learning Rate for Finetuning <strong>(When TRAINING=True)</strong></td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>FINETUNE_EPOCHS</td>
+<td>Int</td>
+<td>Defines the number of Epochs for Finetuning <strong>(When TRAINING=True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>OPTIMIZER</td>
+<td>"Adam",<br>"SGD",<br><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a></td>
+<td>Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td>Adam</td>
+</tr>
+<tr>
+<td>PRETRAINED</td>
+<td>bool</td>
+<td>Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cpu-quantization-aware-training-openvino">CPU Quantization Aware Training - OpenVino</h4>
+<p>Neural networks inference optimization in OpenVINORuntime with minimal accuracy drop. Outputs <code>.xml</code> and <code>.bin</code> model files which can be directly loaded by <code>openvino.core.read_model</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Values</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insize</td>
+<td>Int</td>
+<td>Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td>32</td>
+</tr>
+<tr>
+<td>BATCH_SIZE</td>
+<td>Int</td>
+<td>Batch Size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>TRAINING</td>
+<td>bool</td>
+<td>Enables Finetuning before PTQ</td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATE</td>
+<td>bool</td>
+<td>Enables Validation during Optional Finetuning <strong>(When TRAINING = True)</strong></td>
+<td>True</td>
+</tr>
+<tr>
+<td>VALIDATION_INTERVAL</td>
+<td>Int</td>
+<td>Defines Epoch Intervals for Validation during Finetuning <strong>(When TRAINING, VALIDATE = True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>CRITERION</td>
+<td>"CrossEntropyLoss",<br>"MSE Loss",<br><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></td>
+<td>Defines Loss functions for finetuning/validation <strong>(When TRAINING = True)</strong></td>
+<td>CrossEntropyLoss</td>
+</tr>
+<tr>
+<td>LEARNING RATE</td>
+<td>Float</td>
+<td>Defines Learning Rate for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td>0.001</td>
+</tr>
+<tr>
+<td>FINETUNE_EPOCHS</td>
+<td>Int</td>
+<td>Defines the number of Epochs for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td>OPTIMIZER</td>
+<td>"Adam",<br>"SGD",<br><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a></td>
+<td>Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td>Adam</td>
+</tr>
+<tr>
+<td>PRETRAINED</td>
+<td>bool</td>
+<td>Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td>False</td>
+</tr>
+<tr>
+<td>TRANSFORMER</td>
+<td>bool</td>
+<td>Indicates whether uploaded model consists a transformer based architecture</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h4 id="gpu-post-training-quantization-tensorrt">GPU Post Training Quantization - TensorRT</h4>
+<p>8-bit Quantization executable in GPU via TensorRT Runtime. Outputs <code>.engine</code> model file which can be directly loaded by <code>tensorrt.Runtime</code>. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Values</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Default</strong> <strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">insize</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td style="text-align: left;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">BATCH_SIZE</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Batch Size for dataloader</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">TRAINING</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Enables Finetuning before PTQ</td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATE</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;"><p>Enables Validation during Optional Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATION_INTERVAL</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines Epoch Intervals for Validation during Finetuning.</p><p><strong>(When TRAINING, VALIDATE = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">CRITERION</td>
+<td style="text-align: left;"><p>“CrossEntropyLoss”,</p><p>“MSE Loss”,</p><p><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></p></td>
+<td style="text-align: left;"><p>Defines Loss functions for finetuning/validation</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">CrossEntropyLoss</td>
+</tr>
+<tr>
+<td style="text-align: left;">LEARNING RATE</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Defines Learning Rate for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: left;">FINETUNE_EPOCHS</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines the number of Epochs for Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">OPTIMIZER</td>
+<td style="text-align: left;"><p>“Adam”,</p><p>“SGD”,</p><p><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a> </p></td>
+<td style="text-align: left;">Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td style="text-align: left;">Adam</td>
+</tr>
+<tr>
+<td style="text-align: left;">PRETRAINED</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td style="text-align: left;">False</td>
+</tr>
+</tbody>
+</table>
+<h4 id="knowledge-distillation">Knowledge Distillation</h4>
+<p>Simple Distillation Training Strategy that adds an additional loss between Teacher and Student Predictions. Outputs <code>.pt</code> model file which can be directly loaded by using <code>torch.load</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Values</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Default</strong> <strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">insize</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">A single integer representing the input image size for teacher network and student network</td>
+<td style="text-align: left;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">BATCH_SIZE</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Batch Size for dataloader</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">TRAINING</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Whether to finetune teacher model before distillation.</td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATE</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;"><p>Enables Validation during Optional Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATION_INTERVAL</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines Epoch Intervals for Validation during Finetuning.</p><p><strong>(When TRAINING, VALIDATE = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">CRITERION</td>
+<td style="text-align: left;"><p>“CrossEntropyLoss”,</p><p>“MSE Loss”,</p><p><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></p></td>
+<td style="text-align: left;"><p>Defines Loss functions for finetuning/validation</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">CrossEntropyLoss</td>
+</tr>
+<tr>
+<td style="text-align: left;">LEARNING RATE</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Defines Learning Rate for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: left;">FINETUNE_EPOCHS</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines the number of Epochs for Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">OPTIMIZER</td>
+<td style="text-align: left;"><p>“Adam”,</p><p>“SGD”,</p><p><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a> </p></td>
+<td style="text-align: left;">Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td style="text-align: left;">Adam</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEACHER_MODEL</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Model Name of the provided Teacher Model. <strong>(Required both when intrinsicly provided and when custom teacher is uploaded)</strong></td>
+<td style="text-align: left;">vgg16</td>
+</tr>
+<tr>
+<td style="text-align: left;">CUSTOM_TEACHER_PATH</td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">Relative Path for Teacher checkpoint from User Data folder</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr>
+<td style="text-align: left;">METHOD</td>
+<td style="text-align: left;">"pkd","cwd","pkd_yolo"</td>
+<td style="text-align: left;">Distillation Algorithm to use to distill models.  Needed for MMDetection (pkd,cwd) and MMYolo(pkd_yolo) distillation. Not needed for classification.</td>
+<td style="text-align: left;">pkd</td>
+</tr>
+<tr>
+<td style="text-align: left;">EPOCHS</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Indicates Number of Training Epochs for Distillation</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;">LR</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Indicates Learning Rate for distillation process.</td>
+<td style="text-align: left;">0.01</td>
+</tr>
+<tr>
+<td style="text-align: left;">LAMBDA</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Adjusts the balance between cross entropy andKLDiv (Classification Only)</td>
+<td style="text-align: left;">0.5</td>
+</tr>
+<tr>
+<td style="text-align: left;">TEMPERATURE</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Indicates Temperature for softmax (Classification Only)</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;">SEED</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Sets the seed for random number generation (Classification Only)</td>
+<td style="text-align: left;">43</td>
+</tr>
+<tr>
+<td style="text-align: left;">WEIGHT_DECAY</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Sets the amount of Weight Decay during Distillation (Classification Only)</td>
+<td style="text-align: left;">0.0005</td>
+</tr>
+</tbody>
+</table>
+<h4 id="structured-pruning-image-classification">Structured Pruning (Image Classification)</h4>
+<p>Pruning existing Parameters to increase Efficiency. MM Detection and MM Segmentation models are currently supported through MM Razor Pruning Algorithms. Outputs <code>.pt</code> model file which can be directly loaded by <code>torch.load</code>. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Values</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Default</strong> <strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">insize</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Input Shape For Vision Tasks (Currently only A X A Shapes supported)</td>
+<td style="text-align: left;">32</td>
+</tr>
+<tr>
+<td style="text-align: left;">BATCH_SIZE</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Batch Size for dataloader</td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">TRAINING</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Whether to finetune model after pruning.</td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATE</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;"><p>Enables Validation during Optional Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;">VALIDATION_INTERVAL</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines Epoch Intervals for Validation during Finetuning.</p><p><strong>(When TRAINING, VALIDATE = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">CRITERION</td>
+<td style="text-align: left;"><p>“CrossEntropyLoss”,</p><p>“MSE Loss”,</p><p><a href="https://pytorch.org/docs/stable/nn.html#loss-functions">others</a></p></td>
+<td style="text-align: left;"><p>Defines Loss functions for finetuning/validation</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">CrossEntropyLoss</td>
+</tr>
+<tr>
+<td style="text-align: left;">LEARNING RATE</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Defines Learning Rate for Finetuning <strong>(When TRAINING = True)</strong></td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: left;">FINETUNE_EPOCHS</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;"><p>Defines the number of Epochs for Finetuning</p><p><strong>(When TRAINING = True)</strong></p></td>
+<td style="text-align: left;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">OPTIMIZER</td>
+<td style="text-align: left;"><p>“Adam”,</p><p>“SGD”,</p><p><a href="https://pytorch.org/docs/stable/optim.html#algorithms">others</a> </p></td>
+<td style="text-align: left;">Defines Optimizer for Finetuning. <strong>(When TRAINING = TRUE)</strong></td>
+<td style="text-align: left;">Adam</td>
+</tr>
+<tr>
+<td style="text-align: left;">PRETRAINED</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Indicates whether to load ImageNet Weights in case custom model is not provided.</td>
+<td style="text-align: left;">False</td>
+</tr>
+</tbody>
+</table>
+<p>The below parameters are specifically for the pruning of classification models.
+|<strong>Parameter</strong>|<strong>Values</strong>|<strong>Description</strong>|<strong>Default</strong> <strong>Value</strong>|
+| :- | :- | :- | :- |
+|PRUNER_NAME|<p>MetaPruner,</p><p>GroupNormPruner,</p><p>BNSPruner,</p>|<p>Pruning Algorithm to be utilized for pruning classification models.</p>|GroupNormPruner|
+|GROUP_IMPORTANCE|<p>GroupNormImportance,</p><p>GroupTaylorImportance</p>|<p>Logic for identify importance of parameters to prune.</p>|<p>GroupNormImportance</p>|
+|TARGET_PRUNE_RATE|Int|Parameter Reduction Rate, defines how much parameters are reduced|Integer Value|
+|BOTTLENECK|bool|<p>When Pruning Transformer based Architectures, whether to prune only intermediate layers (bottleneck) or perform uniform pruning.</p>|<p>False</p>|
+|PRUNE_NUM_HEADS|bool|Whether to Prune number of Heads (For Transformer based Architectures)|True|</p>
+<h4 id="structured-pruning-object-detection">Structured Pruning (Object Detection)</h4>
+<p>The below parameters are specifically for the pruning of object detection models.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Values</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Default</strong> <strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">INTERVAL</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Epoch Interval between every pruning operation</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">NORM_TYPE</td>
+<td style="text-align: left;">"act", "flops"</td>
+<td style="text-align: left;">Type of pruning operation. "act" focuses on reducing parameters with minimal changes to activations. "flops" focuses on improving number of flops.</td>
+<td style="text-align: left;">"act"</td>
+</tr>
+<tr>
+<td style="text-align: left;">LR_RATIO</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">Ratio to decrease lr rate.</td>
+<td style="text-align: left;">0.1</td>
+</tr>
+<tr>
+<td style="text-align: left;">TARGET_FLOP_RATIO</td>
+<td style="text-align: left;">Float</td>
+<td style="text-align: left;">The target flop ratio to prune your model. (also used for "act").</td>
+<td style="text-align: left;">0.5</td>
+</tr>
+<tr>
+<td style="text-align: left;">EPOCHS</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Number of epochs to perform training (possibly a multiple of Interval).</td>
+<td style="text-align: left;">20</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.tracking", "navigation.expand", "navigation.path", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
