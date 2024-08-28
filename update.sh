@@ -6,8 +6,8 @@ echo $CWD
 PUBLISH=$CWD/publish
 
 # Clone the repository's gh-pages branch into the "publish" directory
-echo "🚀 Cloning gh-pages branch into publish directory..."
-git clone -b gh-pages https://github.com/nyunai/nyuntam-docs.git $PUBLISH
+echo "🚀 Cloning dev branch into publish directory..."
+git clone -b dev https://github.com/nyunAI/nyuntam-docs.git $PUBLISH
 
 # Clear out existing content in the "publish" directory
 echo "🚀 Clearing existing content in the publish directory..."
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 # Build the documentation using mkdocs
 echo "🚀 Building documentation using mkdocs..."
-mkdocs build -f nyundocs_v1/mkdocs.yml -d $PUBLISH
+mkdocs build -f nyuntam_docs/mkdocs.yml -d $PUBLISH
 
 # Move into the "publish" directory
 cd $PUBLISH
