@@ -149,7 +149,8 @@ The wide variety of tasks and algorithms supported in nyuntam_adapt have several
 
 ## DDP arguments
 
-DistributedDataParallel (DDP) implements data parallelism at the module level which can run across multiple machines. The recommended way to run adaption for a model with DDP is to use the following parameters : 
+DistributedDataParallel (DDP) implements data parallelism at the module level which can run across multiple machines. The recommended way to run adaption for a model with DDP is to use the following parameters :
+
 | Parameter            | Data Type  | Default Value               | Description                                                      |
 |----------------------|------------|-----------------------------|------------------------------------------------------------------|
 | `DDP`              | bool    | True                        | A boolean indicating whether DDP is enabled or not.         |
