@@ -167,6 +167,7 @@ Pruning existing Parameters to increase Efficiency. MM Detection and MM Segmenta
 |PRETRAINED|bool|Indicates whether to load ImageNet Weights in case custom model is not provided.|False|
 
 The below parameters are specifically for the pruning of classification models.
+
 |**Parameter**|**Values**|**Description**|**Default** **Value**|
 | :- | :- | :- | :- |
 |PRUNER\_NAME|<p>MetaPruner,</p><p>GroupNormPruner,</p><p>BNSPruner,</p>|<p>Pruning Algorithm to be utilized for pruning classification models.</p>|GroupNormPruner|
