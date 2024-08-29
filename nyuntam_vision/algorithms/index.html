@@ -1486,14 +1486,49 @@
 </tr>
 </tbody>
 </table>
-<p>The below parameters are specifically for the pruning of classification models.
-|<strong>Parameter</strong>|<strong>Values</strong>|<strong>Description</strong>|<strong>Default</strong> <strong>Value</strong>|
-| :- | :- | :- | :- |
-|PRUNER_NAME|<p>MetaPruner,</p><p>GroupNormPruner,</p><p>BNSPruner,</p>|<p>Pruning Algorithm to be utilized for pruning classification models.</p>|GroupNormPruner|
-|GROUP_IMPORTANCE|<p>GroupNormImportance,</p><p>GroupTaylorImportance</p>|<p>Logic for identify importance of parameters to prune.</p>|<p>GroupNormImportance</p>|
-|TARGET_PRUNE_RATE|Int|Parameter Reduction Rate, defines how much parameters are reduced|Integer Value|
-|BOTTLENECK|bool|<p>When Pruning Transformer based Architectures, whether to prune only intermediate layers (bottleneck) or perform uniform pruning.</p>|<p>False</p>|
-|PRUNE_NUM_HEADS|bool|Whether to Prune number of Heads (For Transformer based Architectures)|True|</p>
+<p>The below parameters are specifically for the pruning of classification models.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Parameter</strong></th>
+<th style="text-align: left;"><strong>Values</strong></th>
+<th style="text-align: left;"><strong>Description</strong></th>
+<th style="text-align: left;"><strong>Default</strong> <strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PRUNER_NAME</td>
+<td style="text-align: left;"><p>MetaPruner,</p><p>GroupNormPruner,</p><p>BNSPruner,</p></td>
+<td style="text-align: left;"><p>Pruning Algorithm to be utilized for pruning classification models.</p></td>
+<td style="text-align: left;">GroupNormPruner</td>
+</tr>
+<tr>
+<td style="text-align: left;">GROUP_IMPORTANCE</td>
+<td style="text-align: left;"><p>GroupNormImportance,</p><p>GroupTaylorImportance</p></td>
+<td style="text-align: left;"><p>Logic for identify importance of parameters to prune.</p></td>
+<td style="text-align: left;"><p>GroupNormImportance</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">TARGET_PRUNE_RATE</td>
+<td style="text-align: left;">Int</td>
+<td style="text-align: left;">Parameter Reduction Rate, defines how much parameters are reduced</td>
+<td style="text-align: left;">Integer Value</td>
+</tr>
+<tr>
+<td style="text-align: left;">BOTTLENECK</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;"><p>When Pruning Transformer based Architectures, whether to prune only intermediate layers (bottleneck) or perform uniform pruning.</p></td>
+<td style="text-align: left;"><p>False</p></td>
+</tr>
+<tr>
+<td style="text-align: left;">PRUNE_NUM_HEADS</td>
+<td style="text-align: left;">bool</td>
+<td style="text-align: left;">Whether to Prune number of Heads (For Transformer based Architectures)</td>
+<td style="text-align: left;">True</td>
+</tr>
+</tbody>
+</table>
 <h4 id="structured-pruning-object-detection">Structured Pruning (Object Detection)</h4>
 <p>The below parameters are specifically for the pruning of object detection models.</p>
 <table>

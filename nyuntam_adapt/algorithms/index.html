@@ -1247,11 +1247,31 @@ Arguments : <ul>
 </tbody>
 </table>
 <h2 id="ddp-arguments">DDP arguments</h2>
-<p>DistributedDataParallel (DDP) implements data parallelism at the module level which can run across multiple machines. The recommended way to run adaption for a model with DDP is to use the following parameters : 
-| Parameter            | Data Type  | Default Value               | Description                                                      |
-|----------------------|------------|-----------------------------|------------------------------------------------------------------|
-| <code>DDP</code>              | bool    | True                        | A boolean indicating whether DDP is enabled or not.         |
-| <code>num_nodes</code>   | int    | 1                      | An integer refering to the number of nodes used for DDP training             |</p>
+<p>DistributedDataParallel (DDP) implements data parallelism at the module level which can run across multiple machines. The recommended way to run adaption for a model with DDP is to use the following parameters :</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Data Type</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DDP</code></td>
+<td>bool</td>
+<td>True</td>
+<td>A boolean indicating whether DDP is enabled or not.</td>
+</tr>
+<tr>
+<td><code>num_nodes</code></td>
+<td>int</td>
+<td>1</td>
+<td>An integer refering to the number of nodes used for DDP training</td>
+</tr>
+</tbody>
+</table>
 <h2 id="fsdp-arguments">FSDP arguments</h2>
 <p>Training AI models at a large scale is a challenging task that requires a lot of compute power and resources. It also comes with considerable engineering complexity to handle the training of these very large models. To address this Fully Sharded Data Parallel (FSDP) comes inbuilt with nyuntam-adapt. When training with FSDP, the GPU memory footprint is smaller than when training with DDP across all workers. This makes the training of some very large models feasible by allowing larger models or batch sizes to fit on device. This comes with the cost of increased communication volume. The communication overhead is reduced by internal optimizations like overlapping communication and computation.</p>
 <table>
