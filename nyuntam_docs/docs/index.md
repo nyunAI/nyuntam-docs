@@ -6,15 +6,9 @@
 <strong>Nyuntam</strong> is NyunAI's advanced suite designed to optimize, adapt, and accelerate a wide array of deep learning models across various domains. The repository is structured into several submodules, each targeting specific tasks:
 </p>
 
-- **[<u>NYUNTAM TEXT GENERATION</u>](./nyuntam_text_generation/index.md)**
-
-    Focuses on compressing large language models for text generation tasks.
-- **[<u>NYUNTAM VISION</u>](./nyuntam_vision/index.md)** 
-
-    Tailored for compressing and optimizing vision models.
-- **[<u>NYUNTAM ADAPT</u>](./nyuntam_adapt/index.md)**
-
-     A robust module for fine-tuning and transfer learning across both vision and language models, leveraging state-of-the-art PEFT, full fine-tuning, and GPU parallelism.
+- **[<u>NYUNTAM TEXT GENERATION</u>](./nyuntam_text_generation/index.md)**: Focuses on compressing large language models for text generation tasks.
+- **[<u>NYUNTAM VISION</u>](./nyuntam_vision/index.md)** : Tailored for compressing and optimizing vision models.
+- **[<u>NYUNTAM ADAPT</u>](./nyuntam_adapt/index.md)**: A robust module for fine-tuning and transfer learning across both vision and language models, leveraging state-of-the-art PEFT, full fine-tuning, and GPU parallelism.
 
 ## Setup and Installation
 
