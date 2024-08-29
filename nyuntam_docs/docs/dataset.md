@@ -276,26 +276,15 @@ Dataset Arguments in Translation:
 
 There are two different ways to import your dataset into Zero:
 
-### Using Dataset Relative Folder Path
-Users can keep the dataset uploaded into the connected infrastructure and provide the "Dataset Relative Folder Path" - relative location with respect to "User Data/Model Folder Path" as provided while connecting the infrastructure. 
+### Custom Data
 
-An example folder structure for relative datasets can be:
+Users who are using a custom dataset (stored locally) to finetune a model can use the `CUSTOM_DATASET_PATH` argument in the yaml to do so. 
 
-```shell
-/home/nyunuser/prayog/custom_data/
-| -- datasets
-|   | -- ImageNetDataset
-|   |   | -- (... as above)
-|   | -- CocoDataset
-|   |   | -- (... as above)
-|   | -- Samvaad
-|   |   | -- ...
-```
+### Pre-existing dataset
 
-And hence the "Dataset Relative Folder Path" can be:
+Users who are using existing datasets from huggingface can use the `DATASET` argument in the yaml. 
 
-1. datasets/ImageNetDataset
-2. datasets/CocoDataset
-3. datasets/Samvaad
+For more examples please refer to [Examples](./examples/) 
+
 
 **Note:** For LLM tasks, the data folder must be loadable by `datasets.load_from_disk` and should return a `datasets.DatasetDict` object and not a `datasets.Dataset` object.
