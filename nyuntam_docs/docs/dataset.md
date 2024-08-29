@@ -1,6 +1,6 @@
 # Dataset Importation
 
-Zero provides comprehensive support for various custom dataset formats, making it simple to import them into the Web App. Additionally, some Kompress Algorithms can execute without requiring any custom datasets.
+Zero provides comprehensive support for various custom dataset formats. Additionally, some Kompress Algorithms can execute without requiring any custom datasets.
 
 ## Dataset Preparation Guidelines
 
@@ -275,9 +275,6 @@ Dataset Arguments in Translation:
 ## Importing Your Dataset
 
 There are two different ways to import your dataset into Zero:
-
-### Using Data File Upload in the Web-App
-Utilize the Import Functionality in the Models and Datasets Tab.
 
 ### Using Dataset Relative Folder Path
 Users can keep the dataset uploaded into the connected infrastructure and provide the "Dataset Relative Folder Path" - relative location with respect to "User Data/Model Folder Path" as provided while connecting the infrastructure. 

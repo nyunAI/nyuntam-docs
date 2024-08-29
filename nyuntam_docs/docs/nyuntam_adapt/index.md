@@ -8,7 +8,7 @@ Adapt is a no-code toolkit that enables Parameter-Efficient Fine-Tuning (PEFT) t
 
 ### Step 1 - Import a model and dataset.
 
-Check [Import Data](../dataset.md) and [Import Model](../model.md) for the exact steps. Make sure that the model-dataset combination provided is valid and of the same task.
+Check [Import Data](../dataset.md) and for the exact steps. Make sure that the model-dataset combination provided is valid and of the same task.
 
 ### Step 2 - Choose an Algorithm.
 

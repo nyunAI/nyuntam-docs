@@ -12,7 +12,7 @@ Nyuntam Text Generation evelops the SoTA compression methods and algorithms to a
 
 ### Step 1 - Import a model and dataset
 
-Check [Import Data](../dataset.md) and [Import Model](../model.md) for the exact steps. Make sure that the model-dataset combination provided is valid and of the same task.
+Check [Import Data](../dataset.md) for the exact steps. Make sure that the model-dataset combination provided is valid and of the same task.
 
 ### Step 2 - Choose an Algorithm
 
