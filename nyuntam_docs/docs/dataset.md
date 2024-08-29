@@ -284,7 +284,7 @@ Users who are using a custom dataset (stored locally) to finetune a model can us
 
 Users who are using existing datasets from huggingface can use the `DATASET` argument in the yaml. 
 
-For more examples please refer to [Examples](#/examples/index.md) 
+For more examples please refer to [Examples](./examples/index.md) 
 
 
 **Note:** For LLM tasks, the data folder must be loadable by `datasets.load_from_disk` and should return a `datasets.DatasetDict` object and not a `datasets.Dataset` object.
