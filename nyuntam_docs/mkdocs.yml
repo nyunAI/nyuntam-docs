@@ -70,4 +70,4 @@ extra:
 plugins:
   - search
   - social
-  - blog
+  # - blog
