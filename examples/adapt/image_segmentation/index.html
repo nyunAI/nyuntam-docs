@@ -627,7 +627,7 @@
 
 <h1 id="segnext-on-cityscapes-dataset-using-ssf">SegNeXt on cityscapes dataset using SSF</h1>
 <h2 id="overview">Overview</h2>
-<p>This guide provides a walkthrough of applying SegNeXt for instance segmentation on the cityscapes dataset using SSF (Scaling and Shifting the deep Features). SSF enables parameter efficient fine-tuning by proposing that performace simillar to full fine-tuning can be achieved by only scaling and shifting the features of a deep neural network. </p>
+<p>This guide provides a walkthrough of applying SegNeXt for instance segmentation on the cityscapes dataset using SSF (Scaling and Shifting the deep Features). SSF enables parameter efficient fine-tuning by proposing that performance similar to full fine-tuning can be achieved by only scaling and shifting the features of a deep neural network. </p>
 <h2 id="table-on-contents">Table on Contents</h2>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
@@ -639,7 +639,7 @@
 <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 <h2 id="introduction">Introduction</h2>
-<p>In this example we will be finetuning SegNeXt large model on a city scapes dataset uisng a PEFT technique called SSF (Scale and Shift deep Features). SSF uses two linear layers to learn the scale and shift factors for deep features and hence uses very few trainable parameters. </p>
+<p>In this example we will be fine-tuning SegNeXt large model on a city scapes dataset using a PEFT technique called SSF (Scale and Shift deep Features). SSF uses two linear layers to learn the scale and shift factors for deep features and hence uses very few trainable parameters. </p>
 <h2 id="requirements">Requirements</h2>
 <p>Before you begin, ensure that you have the following:
 - A GPU-enabled environment with CUDA support.
@@ -672,7 +672,7 @@ nyun init {WORKSPACE_PATH} -e adapt
 └── horizons.txt
 </code></pre>
 <p>The text files contain the segmentation maps in digits. In this dataset we will only be using the "regions" as the segmentation maps. These are the text files which are named as "image1.regions.txt". These text files are converted to ".png" images.<br />
-The new data folder structure is formatted in the folowing way: </p>
+The new data folder structure is formatted in the following way: </p>
 <pre><code class="language-bash">iccv09Data
 └── images
 |   └── image1.jpg
