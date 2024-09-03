@@ -2,7 +2,7 @@
 
 ## Overview 
 
-This guide provides a walkthrough of applying SegNeXt for instance segmentation on the cityscapes dataset using SSF (Scaling and Shifting the deep Features). SSF enables parameter efficient fine-tuning by proposing that performace simillar to full fine-tuning can be achieved by only scaling and shifting the features of a deep neural network. 
+This guide provides a walkthrough of applying SegNeXt for instance segmentation on the cityscapes dataset using SSF (Scaling and Shifting the deep Features). SSF enables parameter efficient fine-tuning by proposing that performance similar to full fine-tuning can be achieved by only scaling and shifting the features of a deep neural network. 
 
 ## Table on Contents
  - [Introduction](#introduction)
@@ -16,7 +16,7 @@ This guide provides a walkthrough of applying SegNeXt for instance segmentation 
 
 ## Introduction
 
-In this example we will be finetuning SegNeXt large model on a city scapes dataset uisng a PEFT technique called SSF (Scale and Shift deep Features). SSF uses two linear layers to learn the scale and shift factors for deep features and hence uses very few trainable parameters. 
+In this example we will be fine-tuning SegNeXt large model on a city scapes dataset using a PEFT technique called SSF (Scale and Shift deep Features). SSF uses two linear layers to learn the scale and shift factors for deep features and hence uses very few trainable parameters. 
 
 ## Requirements
 
@@ -63,7 +63,7 @@ iccv09Data
 ```
 
 The text files contain the segmentation maps in digits. In this dataset we will only be using the "regions" as the segmentation maps. These are the text files which are named as "image1.regions.txt". These text files are converted to ".png" images.  
-The new data folder structure is formatted in the folowing way: 
+The new data folder structure is formatted in the following way: 
 
 ```bash
 iccv09Data

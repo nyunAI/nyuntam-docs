@@ -1,11 +1,11 @@
 # Dataset Importation
 
-Zero provides comprehensive support for various custom dataset formats. Additionally, some Kompress Algorithms can execute without requiring any custom datasets.
+Nyuntam provides comprehensive support for various custom dataset formats. Additionally, some algorithms can execute without requiring any custom datasets.
 
 ## Dataset Preparation Guidelines
 
 ### Image Classification
-For image classification tasks, Zero is compatible with the standard ImageNet dataset format. This format necessitates organizing images into folders representing respective categories, with validation splits already performed. The prescribed structure is as follows:
+For image classification tasks, nyuntam is compatible with the standard ImageNet dataset format. This format necessitates organizing images into folders representing respective categories, with validation splits already performed. The prescribed structure is as follows:
 
 ```shell
 ImageNetDataset/
@@ -32,7 +32,7 @@ ImageNetDataset/
 ```
 
 ### Object Detection
-Zero extends support to both COCO and VOC dataset formats for object detection tasks. The formats are detailed below:
+Nyuntam extends support to both COCO and VOC dataset formats for object detection tasks. The formats are detailed below:
 
 **COCO Format**
 ```shell
@@ -57,7 +57,7 @@ VOCdevkit/
 ```
 
 ### Segmentation
-For image segmentation tasks, NYUN-KOMPRESS exclusively supports the VOC Format. The layout is structured as follows:
+For image segmentation tasks, Nyuntam Vision exclusively supports the VOC Format. The layout is structured as follows:
 
 ```shell
 VOCdevkit/
@@ -74,7 +74,7 @@ VOCdevkit/
 |   |   | -- (Contains SegmentationObject files)
 ```
 
-NYUN-Adapt requires the dataset to be in the following format : 
+Nyuntam Adapt requires the dataset to be in the following format : 
 ```shell
 custom_data/
 | -- dataset
@@ -86,7 +86,7 @@ custom_data/
 ```
 
 ### Pose Detection
-For pose detection tasks, Zero exclusively supports the COCO-Pose Format. The layout is structured as follows:
+For pose detection tasks, Nyuntam exclusively supports the COCO-Pose Format. The layout is structured as follows:
 
 ```shell
 coco-pose/
@@ -101,9 +101,9 @@ coco-pose/
 ```
 
 
-### LLM Text Generation
+### Nyuntam Text-Generation
 
-Zero supports loading any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. It supports two main dataset formats:
+Nyuntam supports loading any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. It supports two main dataset formats:
 
 **LLM - Single Column**
 
@@ -162,7 +162,7 @@ Alpaca dataset after formatting with the input params
 | ...                             | ...                             | ...                             | ...                             |
 
 ### Text Classification
-Zero supports token classification and text clasification. Users can load any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. Make sure the uploaded dataset has the following format:
+Nyuntam supports token classification and text clasification. Users can load any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. Make sure the uploaded dataset has the following format:
 
 
 | Parameter        | Data Type  | Default Value            | Description                                      |
@@ -193,7 +193,7 @@ Example dataset formats :
 | 4 | ["Germany", "'s", "representative", "to", ...] | [22, 27, 21, 35, 12, 22, 22, 27, ...] |
 
 ### Summarization
-Zero supports loading any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. Make sure the uploaded dataset has the following format:
+Nyuntam supports loading any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. Make sure the uploaded dataset has the following format:
 
 | document | summary |
 |----------|---------|
@@ -206,7 +206,7 @@ Zero supports loading any text dataset compatible with the Hugging Face `dataset
 
 
 
-The dataset params for summarization tasks in Adapt are as follows : 
+The dataset params for summarization tasks in nyuntam-adapt are as follows : 
 
 | Key                   | Value                          | Description                                   |
 |-----------------------|--------------------------------|-----------------------------------------------|
@@ -215,7 +215,7 @@ The dataset params for summarization tasks in Adapt are as follows :
 | target_column         | 'summary'                      | Name of the target column containing the summarized text                    |
 
 ### Question Answering
-The dataset for question answering must follow the general Adapt dataset. Adapt currently support extractive question-answering and hence requires :
+The dataset for question answering must follow the general nyuntam-adapt dataset. nyuntam-adapt currently support extractive question-answering and hence requires :
 
 - **CONTEXT** 
         - Text column that contains the context 
@@ -254,7 +254,7 @@ Example of a default dataset for Question Answering :
  Beyoncé Giselle Knowles-Carter | In what city and state did Beyonce... |{ "text": [ "Houston, Texas" ],... }|
 
 ### Translation
-Zero supports loading any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. Make sure the uploaded dataset has the following format:
+Nyuntam supports loading any text dataset compatible with the Hugging Face `datasets.load_dataset` for HF datasets or `datasets.load_from_disk` for custom datasets. Make sure the uploaded dataset has the following format:
 
 | id | translation |
 |----|-----------------------------------------|
@@ -274,7 +274,7 @@ Dataset Arguments in Translation:
 
 ## Importing Your Dataset
 
-There are two different ways to import your dataset into Zero:
+There are two different ways to import your dataset into Nyuntam:
 
 ### Custom Data
 

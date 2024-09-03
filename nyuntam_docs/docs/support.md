@@ -2,7 +2,7 @@
 
 Below are tables summarizing the support for various compression and adaption techniques across different models. Apart from these, other similar models may be supported but have not been tested. 
 
-## Vision Compression
+## Nyuntam Vision
 
 Note that in the Table below, CPU and GPU indicate the target device of deployment. PTQ indicates Post Training Quantization and QAT indicates Quantization Aware Training.
 
@@ -18,7 +18,7 @@ Note that in the Table below, CPU and GPU indicate the target device of deployme
 | RTMDet (mmyolo/mmdet)        | -               | ✓                  | -              | ✓                  | ✓               | ✓                      | -                  | -                  |
 | Yolov8 (mmyolo)              | -               | -                  | -              | ✓                  | -               | ✓                      | -                  | -                  |
 
-## LLM Compression
+## Nyuntam Text-Generation
 
 | Model   	| AWQ 	| LMQuant (QoQ) 	| AQLM 	| TensorRT 	| Exllama 	| MLC-LLM 	| FLAP 	|
 |---------	|-----	|---------------	|------	|----------	|---------	|---------	|------	|
@@ -30,7 +30,7 @@ Note that in the Table below, CPU and GPU indicate the target device of deployme
 | Mixtral 	| ✓   	| ✓             	| ✓    	| ✓        	| ✓       	| ✓       	| ✓    	|
 | Gemma   	| ✓   	| -             	| ✓    	| ✓        	| -       	| -       	| -    	|
 
-## Adapt
+## Nyuntam Adapt
 
 ### LLM Tasks 
 <ul>
