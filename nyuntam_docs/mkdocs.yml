@@ -1,0 +1,73 @@
+site_name: Nyun Zero
+site_url: https://zero.nyunai.com/docs/
+nav:
+  - Home: index.md
+  - Dataset Import: dataset.md
+  - Model Import: model.md
+  - Support Grid: support.md
+  - Nyuntam Adapt: 
+    - Overview: nyuntam_adapt/index.md
+    - Algorithms: nyuntam_adapt/algorithms.md
+  - Nyuntam Vision:
+    - Overview: nyuntam_vision/index.md
+    - Algorithms: nyuntam_vision/algorithms.md
+  - Nyuntam Text Generation:
+    - Overview: nyuntam_text_generation/index.md
+    - Algorithms: nyuntam_text_generation/algorithms.md
+  - Examples:
+    - examples/index.md
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - navigation.indexes
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+            icon: material/brightness-7 
+            name: Switch to dark mode
+
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+
+  logo: assets/nyun.png
+extra:
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     We use cookies to recognize your repeated visits and preferences, as well
+  #     as to measure the effectiveness of our documentation and whether users
+  #     find what they're searching for. With your consent, you're helping us to
+  #     make our documentation better.
+  # analytics: 
+  #   provider: google
+  #   property: G-X
+  homepage: https://www.nyunai.com
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+    - python
+    - shell
+plugins:
+  - search
+  - social
+  # - blog
