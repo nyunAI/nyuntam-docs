@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../support/">
+        <link rel="next" href="../model/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -466,6 +466,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Import
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../support/" class="md-nav__link">
         
   
@@ -503,7 +523,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           
@@ -519,14 +539,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Nyuntam Adapt
           </label>
@@ -586,7 +606,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           
@@ -602,14 +622,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Nyuntam Vision
           </label>
@@ -669,7 +689,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
           
@@ -685,14 +705,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Nyuntam Text Generation
           </label>
@@ -750,7 +770,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           
@@ -767,8 +787,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Examples
           </label>
@@ -803,7 +823,7 @@
 <h2 id="dataset-preparation-guidelines">Dataset Preparation Guidelines</h2>
 <h3 id="image-classification">Image Classification</h3>
 <p>For image classification tasks, nyuntam is compatible with the standard ImageNet dataset format. This format necessitates organizing images into folders representing respective categories, with validation splits already performed. The prescribed structure is as follows:</p>
-<pre><code class="language-shell">ImageNetDataset/
+<pre><code class="language-shell">[Dataset folder]/
 | -- train
 |   | -- Class_A
 |   |   | -- image1.jpg
@@ -828,7 +848,7 @@
 <h3 id="object-detection">Object Detection</h3>
 <p>Nyuntam extends support to both COCO and VOC dataset formats for object detection tasks. The formats are detailed below:</p>
 <p><strong>COCO Format</strong></p>
-<pre><code class="language-shell">CocoDataset/
+<pre><code class="language-shell">[Dataset Folder]/root/
 | -- train2017
 |   | -- (Contains training images)
 | -- val2017
@@ -838,7 +858,7 @@
 |   | -- instances_val2017.json    (Val Annotations)
 </code></pre>
 <p><strong>VOC Format</strong></p>
-<pre><code class="language-shell">VOCdevkit/
+<pre><code class="language-shell">[Dataset Folder]/VOCdevkit/
 | -- VOC2012
 |   | -- Annotations
 |   |   | -- (Contains annotation files)
@@ -1307,9 +1327,15 @@ FORMAT_STRING - Instruction:\n{instruction}\n\nInput:\n{input}\n\nOutput:\n{outp
 <h2 id="importing-your-dataset">Importing Your Dataset</h2>
 <p>There are two different ways to import your dataset into Nyuntam:</p>
 <h3 id="custom-data">Custom Data</h3>
-<p>Users who are using a custom dataset (stored locally) to finetune a model can use the <code>CUSTOM_DATASET_PATH</code> argument in the yaml to do so. </p>
+<p>Users who are using a custom dataset (stored locally):
+- For nyuntam-adapt, <code>CUSTOM_DATASET_PATH</code> argument in the yaml can be updated . </p>
+<ul>
+<li>For nyuntam-text-generation and nyuntam-vision, <code>DATA_PATH</code> argument in the yaml can be updated.</li>
+</ul>
 <h3 id="pre-existing-dataset">Pre-existing dataset</h3>
-<p>Users who are using existing datasets from huggingface can use the <code>DATASET</code> argument in the yaml. </p>
+<p>Users who are using existing datasets from huggingface:
+- For nyuntam-adapt, use the <code>DATASET</code> argument in the yaml. 
+- for nyuntam-text-generation, use the <code>DATASET_NAME</code> argument in the yaml.</p>
 <p>For more examples please refer to <a href="../examples/">Examples</a> </p>
 <p><strong>Note:</strong> For LLM tasks, the data folder must be loadable by <code>datasets.load_from_disk</code> and should return a <code>datasets.DatasetDict</code> object and not a <code>datasets.Dataset</code> object.</p>
 
