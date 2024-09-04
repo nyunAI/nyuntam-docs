@@ -280,7 +280,7 @@ There are two different ways to import your dataset into Nyuntam:
 Users who are using a custom dataset (stored locally):
 - For nyuntam-adapt, `CUSTOM_DATASET_PATH` argument in the yaml can be updated . 
 
-- For nyuntam-text-generation, `DATA_PATH` argument in the yaml can be updated.
+- For nyuntam-text-generation and nyuntam-vision, `DATA_PATH` argument in the yaml can be updated.
 
 ### Pre-existing dataset
 
