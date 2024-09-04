@@ -44,7 +44,7 @@ nyun init {WORKSPACE_PATH} -e adapt
 
 ## Dataset
 
-[XSum Dataset](https://huggingface.co/datasets/EdinburghNLP/xsum) is used for this example. The dataset is directly used from 🤗hugginface. 
+[XSum Dataset](https://huggingface.co/datasets/EdinburghNLP/xsum) is used for this example. The dataset is directly used from 🤗huggingface. 
 
 Sample : 
 | document                                                                 | summary                                                                 | id        |
