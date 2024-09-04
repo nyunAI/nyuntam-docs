@@ -8,7 +8,7 @@ Nyuntam provides comprehensive support for various custom dataset formats. Addit
 For image classification tasks, nyuntam is compatible with the standard ImageNet dataset format. This format necessitates organizing images into folders representing respective categories, with validation splits already performed. The prescribed structure is as follows:
 
 ```shell
-ImageNetDataset/
+[Dataset folder]/
 | -- train
 |   | -- Class_A
 |   |   | -- image1.jpg
@@ -36,7 +36,7 @@ Nyuntam extends support to both COCO and VOC dataset formats for object detectio
 
 **COCO Format**
 ```shell
-CocoDataset/
+[Dataset Folder]/root/
 | -- train2017
 |   | -- (Contains training images)
 | -- val2017
@@ -48,7 +48,7 @@ CocoDataset/
 
 **VOC Format**
 ```shell
-VOCdevkit/
+[Dataset Folder]/VOCdevkit/
 | -- VOC2012
 |   | -- Annotations
 |   |   | -- (Contains annotation files)

@@ -16,7 +16,7 @@ Nyun-cli offers the users the luxury to compress their neural networks via a sin
 pip install git+https://github.com/nyunAI/nyunzero-cli.git
 nyun init {WORKSPACE_PATH} ""
 ```
-Here ``WORKSPACE_PATH`` is the root folder for running the experimentation and ``CUSTOM_DATA_PATH`` defines the path of custom data. The ``YAML_PATH`` is the path of configuration to be used. The base configuration used for this example can be found at [vision scripts]().This example offers a basic example for  installing nyuncli visit nyuncli documentation for a more advanced installation.
+Here ``WORKSPACE_PATH`` is the root folder for running the experimentation and ``CUSTOM_DATA_PATH`` defines the path of custom data. The ``YAML_PATH`` is the path of configuration to be used. The base configuration used for this example can be found at [vision scripts](https://github.com/nyunAI/nyuntam-vision/blob/main/scripts/quant/NNCFPTQ.yaml).This example offers a basic example for  installing nyuncli visit nyuncli documentation for a more advanced installation.
 #### 2. Downloading the dataset
 Downloading and formatting CIFAR-10 dataset is automated via Nyuntam. We need to specify the following hyperparameters in the YAML configuration 
 ```yaml
@@ -80,4 +80,3 @@ The Final Results are as follows:
 |-------|----------|---------|
 | FP32  | 67.7     | 1.32 ms |
 | INT8  | 67.2     | 0.68 ms |
-
