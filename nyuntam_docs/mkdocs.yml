@@ -1,5 +1,5 @@
-site_name: Nyun Zero
-site_url: https://zero.nyunai.com/docs/
+site_name: Nyuntam
+site_url: https://nyunai.github.io/nyuntam-docs/
 nav:
   - Home: index.md
   - Dataset Import: dataset.md
