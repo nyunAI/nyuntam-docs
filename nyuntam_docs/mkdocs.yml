@@ -3,7 +3,7 @@ site_url: https://zero.nyunai.com/docs/
 nav:
   - Home: index.md
   - Dataset Import: dataset.md
-  # - Model Import: model.md
+  - Model Import: model.md
   - Support Grid: support.md
   - Nyuntam Adapt: 
     - Overview: nyuntam_adapt/index.md

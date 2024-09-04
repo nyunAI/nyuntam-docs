@@ -277,12 +277,16 @@ Dataset Arguments in Translation:
 There are two different ways to import your dataset into Nyuntam:
 
 ### Custom Data
+Users who are using a custom dataset (stored locally):
+- For nyuntam-adapt, `CUSTOM_DATASET_PATH` argument in the yaml can be updated . 
 
-Users who are using a custom dataset (stored locally) to finetune a model can use the `CUSTOM_DATASET_PATH` argument in the yaml to do so. 
+- For nyuntam-text-generation, `DATA_PATH` argument in the yaml can be updated.
 
 ### Pre-existing dataset
 
-Users who are using existing datasets from huggingface can use the `DATASET` argument in the yaml. 
+Users who are using existing datasets from huggingface:
+- For nyuntam-adapt, use the `DATASET` argument in the yaml. 
+- for nyuntam-text-generation, use the `DATASET_NAME` argument in the yaml.
 
 For more examples please refer to [Examples](./examples/index.md) 
 
