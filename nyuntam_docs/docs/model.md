@@ -22,7 +22,8 @@ To use this method:
 To use this method:
 
 1.For nyuntam-adapt use the `LOCAL_MODEL_PATH` argument in the YAML to specify the absolute path of the folder containing the model weights.
-2. For nyuntam-text-generation use the `CUSTOM_MODEL_PATH` argument in the YAML to specify the absolute path of the folder containing the model weights.
+2. For nyuntam-text-generation and nyuntam-vison use the `CUSTOM_MODEL_PATH` argument in the YAML to specify the absolute path of the folder containing the model weights.
+3. When using distillation algorithms with nyuntam-vision, custom model weights can be loaded using `CUSTOM_TEACHER_PATH`. 
 
 
 **Note:** For LLM tasks, the model folder must be loadable by `transformers.AutoModelForCausalLM.from_pretrained` and should return a `torch.nn.Module` object or a state_dict (i.e., `collections.OrderedDict` object) that can be loaded using `torch.load`.
