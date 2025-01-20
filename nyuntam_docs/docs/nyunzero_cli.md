@@ -1,43 +1,39 @@
-# Nyun CLI
+# Nyuntam CLI
 
-Nyun CLI is a command-line interface tool that provides a convenient way to initialize and manage your Nyun workspace, as well as run various scripts and algorithms supported by Nyun.
+Nyuntam also provides a command-line interface tool that provides a convenient way to initialize and manage your Nyuntam workspace, as well as run various scripts and algorithms supported by Nyuntam.
 
 ## Installation
 
-To install Nyun CLI, you need to have Python 3.6 or later installed on your system. You can then install the CLI tool using pip:
+To install Nyuntam, you need to have Python 3.6 or later installed on your system. You can then install the CLI tool using pip:
 
 ```shell
-pip install nyun-cli
+pip install nyuntam
 ```
 
 ## Usage
 
-After installation, you can use the `nyun` command to access the available commands. Run `nyun --help` to see the list of available commands and their descriptions.
+After installation, you can use the `nyuntam` command to access the available commands. Run `nyuntam --help` to see the list of available commands and their descriptions.
 
 ### Initializing the Workspace
 
-Before you can run any scripts or algorithms, you need to initialize your Nyun workspace. You can do this using the `init` command:
+Before you can run any scripts or algorithms, you need to initialize your Nyuntam workspace. You can do this using the `init` command:
 
 ```shell
-nyun init [WORKSPACE_PATH] [CUSTOM_DATA_PATH] [OPTIONS]
+nyuntam init [WORKSPACE_PATH] [CUSTOM_DATA_PATH] [OPTIONS]
 ```
-
 - `WORKSPACE_PATH`: The path to the workspace directory. If not provided, the current working directory will be used.
 - `CUSTOM_DATA_PATH`: The path to the custom data directory. If not provided, a default directory will be created within the workspace.
 - `OPTIONS`:
   - `--overwrite`, `-o`: Overwrite the existing workspace spec if it already exists.
   - `--extensions`, `-e`: Specify the extensions to install. Defaults to installing all available extensions. Available extensions are:
-    - `kompress-vision`: For vision-related tasks (e.g., object detection, image classification), using Nyun Kompress.
-    - `kompress-text-generation`: For text generation tasks using Nyun Kompress.
-    - `adapt`: For the Adapt framework, which supports various tasks like detection, segmentation, and text generation.
-    - `all`: Install all available extensions.
-    - `none`: Don't install any extension.
+    - `"all"`: Install all available extensions.
+    - `"none"`: Don't install any extension.
 
 Example:
 
 ```shell
 # mkdir ~/my-workspace
-nyun init ~/my-workspace ~/my-data --extensions kompress-vision
+nyun init ~/my-workspace ~/my-data
 ```
 
 This command initializes a new workspace at `~/my-workspace` and sets the custom data directory to `~/my-data`, installing the Nyun Kompress Vision extension.
@@ -55,7 +51,7 @@ nyun run [SCRIPT_PATH]
 Example:
 
 ```shell
-nyun run ~/my-script.yaml
+nyuntam run ~/my-script.yaml
 ```
 
 This command runs the script located at `~/my-script.yaml` within your initialized workspace.
@@ -63,15 +59,15 @@ This command runs the script located at `~/my-script.yaml` within your initializ
 To run chained scripts, you can provide multiple script paths in the order of execution:
 
 ```shell
-nyun run ~/my-script1.yaml ~/my-script2.yaml
+nyuntam run ~/my-script1.yaml ~/my-script2.yaml
 ```
 
 ### Checking Version
 
-To check the version of the Nyun CLI you have installed, use the `version` command:
+To check the version of the Nyuntam CLI you have installed, use the `version` command:
 
 ```shell
-nyun version
+nyuntam version
 ```
 
 <!-- ## Contributing
